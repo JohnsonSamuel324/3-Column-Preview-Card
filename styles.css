@@ -20,7 +20,6 @@ p {
 
 .car-types {
     width: 90%;
-    height: 100%;
     margin: 4rem 0;
 }
 
@@ -62,11 +61,11 @@ p {
 }
 
 .car-type button {
-    width: 45%;
+    width: 50%;
     border: 0;
     background-color: #ffffff;
-    padding: 1rem 1.5rem;
-    border-radius: 24px;
+    padding: 1rem 2em;
+    border-radius: 32px;
     margin-bottom: 3rem;
     font-size: 1rem;
 }
@@ -96,4 +95,61 @@ p {
 }
 .attribution a { 
     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+    .car-types {
+        width: 65%;
+    }
+}
+@media (min-width: 1024px) {
+    body {
+        height: 100vh;
+    }
+    .car-types {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
+        margin: 0;
+    }
+    .car-type:first-child {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+    .car-type:last-child {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .car-type img {
+        margin-bottom: .5rem;
+    }
+    .car-type p {
+        margin-bottom: 4rem;
+    }
+    .car-type button {
+        margin-bottom: 3.5rem;
+    }
+    .car-type button:hover {
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid #ffffff
+    }
+    #sedan-section button:hover, #suv-section button:hover, #luxury-section button:hover { 
+        color: #ffffff;
+    }
+    .attribution { 
+        position: absolute;
+        bottom: 0;
+    }
+}
+@media (min-width: 1440px) {
+    .car-types {
+        width: 65%;
+    }
+    .car-type p {
+        line-height: 2rem;
+    }
+    .car-type button {
+        width: 45%;
+    }
 }
